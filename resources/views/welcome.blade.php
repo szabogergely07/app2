@@ -62,6 +62,11 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            .pictrial {
+                margin: auto;
+                width: 50%;
+            }
         </style>
     </head>
     <body>
@@ -90,7 +95,7 @@
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
             </div> -->
-            <div class="col-sm-12">
+            <div class="pictrial">
                 <img src="http://4.bp.blogspot.com/-aEuyZQ1Mocw/U4H8kfGpF_I/AAAAAAAAAeY/NhOahbjRNY0/s1600/coming-soon.png">
             </div>
         </div>
