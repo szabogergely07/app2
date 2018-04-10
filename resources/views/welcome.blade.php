@@ -90,7 +90,9 @@
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
             </div> -->
-            <img src="http://4.bp.blogspot.com/-aEuyZQ1Mocw/U4H8kfGpF_I/AAAAAAAAAeY/NhOahbjRNY0/s1600/coming-soon.png"
+            <div class="col-sm-12">
+                <img src="http://4.bp.blogspot.com/-aEuyZQ1Mocw/U4H8kfGpF_I/AAAAAAAAAeY/NhOahbjRNY0/s1600/coming-soon.png">
+            </div>
         </div>
     </body>
 </html>
