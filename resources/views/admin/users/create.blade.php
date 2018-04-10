@@ -50,4 +50,13 @@
 {!! Form::close() !!}
 </div>
 
+
+@include('partials.form_error')
+
+
+
+
+
+
+
 @stop
