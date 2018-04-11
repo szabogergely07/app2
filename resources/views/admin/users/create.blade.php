@@ -10,7 +10,7 @@
 
 <div class="container">
 
-{!! Form::open(['method' => 'POST', 'action' => 'AdminUsersController@store']) !!}
+{!! Form::open(['method' => 'POST', 'action' => 'AdminUsersController@store', 'files'=> true]) !!}
 
     <div class="form-group">
         {!! Form::label('name', 'Name') !!}
@@ -37,8 +37,14 @@
     </div>
 
     <div class="form-group">
-        {!! Form::label('status', 'Status') !!}
-        {!! Form::select('status', array(0 => 'Not Active', 1=> 'Active'), 0, ['class' => 'form-control']) !!}
+        {!! Form::label('is_active', 'Status') !!}
+        {!! Form::select('is_active', array(0 => 'Not Active', 1=> 'Active'), 0, ['class' => 'form-control']) !!}
+        {{ $errors->first('title', '<p class="help-block">:message</p>') }}
+    </div>
+
+    <div class="form-group">
+        {!! Form::label('photo_id', 'Photo') !!}
+        {!! Form::file('photo_id', null, ['class' => 'form-control']) !!}
         {{ $errors->first('title', '<p class="help-block">:message</p>') }}
     </div>
 
