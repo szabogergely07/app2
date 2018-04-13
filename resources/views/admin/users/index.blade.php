@@ -22,7 +22,7 @@
 
   <tr>
     <td>{{$user->id}}</td>
-    <td><img height=50 src="{{$user->photo_id}}"></td>
+    <td><img height=50 class="img-rounded" src="{{$user->photo_id}}"></td>
     <td><a href="{{route('admin.users.edit', $user->id)}}"> {{$user->name}}</a></td>
     <td>{{$user->email}}</td>
     <td>{{$user->role_id == 1 ? "Subscriber" : "Admin"}}</td>

@@ -96,7 +96,7 @@
                 </div>
             </div> -->
             <div class="pictrial">
-                <img src="http://4.bp.blogspot.com/-aEuyZQ1Mocw/U4H8kfGpF_I/AAAAAAAAAeY/NhOahbjRNY0/s1600/coming-soon.png">
+                <img class="img-responsive" src="http://4.bp.blogspot.com/-aEuyZQ1Mocw/U4H8kfGpF_I/AAAAAAAAAeY/NhOahbjRNY0/s1600/coming-soon.png">
             </div>
         </div>
     </body>
