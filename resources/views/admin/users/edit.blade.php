@@ -16,7 +16,7 @@
 
 <div class="container col-sm-9">
 
-{!! Form::model($user, ['method' => 'PATCH', 'action' => ['AdminUsersController@update', $user->id], 'files'=> true]) !!}
+{!! Form::model($user, ['method' => 'PATCH', 'action' => ['AdminUsersController@update', $user->id]]) !!}
 
     <div class="form-group">
         {!! Form::label('name', 'Name') !!}
@@ -38,7 +38,7 @@
 
     <div class="form-group">
         {!! Form::label('role_id', 'Role') !!}
-        {!! Form::select('role_id', $roles, null, ['class' => 'form-control']) !!}
+        {!! Form::select('role_id', array(0 => 'Admin', 1 => 'Subscriber'), 0, ['class' => 'form-control']) !!}
         {{ $errors->first('title', '<p class="help-block">:message</p>') }}
     </div>
 
@@ -50,12 +50,12 @@
 
     <div class="form-group">
         {!! Form::label('photo_id', 'Photo') !!}
-        {!! Form::file('photo_id', null, ['class' => 'form-control']) !!}
+        {!! Form::text('photo_id', null, ['class' => 'form-control']) !!}
         {{ $errors->first('title', '<p class="help-block">:message</p>') }}
     </div>
 
     <div class="form-group">
-        {!! Form::submit('Create User', ['class' => 'btn btn-primary']) !!}
+        {!! Form::submit('Update User', ['class' => 'btn btn-primary']) !!}
         
     </div>
 

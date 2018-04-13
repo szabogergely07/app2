@@ -22,11 +22,11 @@
 
   <tr>
     <td>{{$user->id}}</td>
-    <td><img height=50 src="http://cdn.iseated.com/assets/img/nopicture.jpg"></td>
+    <td><img height=50 src="{{$user->photo_id}}"></td>
     <td><a href="{{route('admin.users.edit', $user->id)}}"> {{$user->name}}</a></td>
     <td>{{$user->email}}</td>
-    <td>{{$user->role->name}}</td>
-    <td>{{$user->is_active == 1 ? "Active" :"Not Active"}}
+    <td>{{$user->role_id == 1 ? "Subscriber" : "Admin"}}</td>
+    <td>{{$user->is_active == 1 ? "Active" : "Not Active"}}
     <td>{{$user->created_at->diffForHumans()}}</td>
   	<td>{{$user->updated_at->diffForHumans()}}</td>
   </tr>
