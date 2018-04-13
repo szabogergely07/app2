@@ -9,10 +9,10 @@
 <br>
 
 <div class="col-sm-3">
-    <img src="http://cdn.iseated.com/assets/img/nopicture.jpg" class="img-responsive img-rounded">    
+    <img height=70 class="img-rounded img-responsive" src="{{$user->photo_id}}">    
 
 </div>
-
+<br>
 
 <div class="container col-sm-9">
 
