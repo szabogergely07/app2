@@ -36,7 +36,7 @@ class User extends Authenticatable
 
    
 
-    public function isAdmin(){
+    // public function isAdmin(){
     //     if($this->role_id == 0){
     //         return true;
     //     }
