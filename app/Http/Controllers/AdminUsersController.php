@@ -46,22 +46,22 @@ class AdminUsersController extends Controller
         
         $input = $request->all();
 
-        if($file = $request->file('photo_id')) {
+        // if($file = $request->file('photo_id')) {
 
-            $name = time() . $file->getClientOriginalName();
-
-
-            $file->move('images', $name);
-
-            $photo = Photo::create(['file'=>$name]);
+        //     $name = time() . $file->getClientOriginalName();
 
 
-            $input['photo_id'] = $photo->id;
+        //     $file->move('images', $name);
+
+        //     $photo = Photo::create(['file'=>$name]);
 
 
-        }
+        //     $input['photo_id'] = $photo->id;
 
-        $input['password'] = bcrypt($request->password);
+
+        // }
+
+        // $input['password'] = bcrypt($request->password);
 
         User::create($input);
 
