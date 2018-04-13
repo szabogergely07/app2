@@ -37,11 +37,11 @@ class User extends Authenticatable
    
 
     public function isAdmin(){
-        if($this->role_id == 0){
-            return true;
-        }
-        return false;
-    }
+    //     if($this->role_id == 0){
+    //         return true;
+    //     }
+    //     return false;
+    // }
 
 
 
