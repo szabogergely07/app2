@@ -17,6 +17,7 @@
 <div class="container col-sm-9">
 
 {!! Form::model($user, ['method' => 'PATCH', 'action' => ['AdminUsersController@update', $user->id]]) !!}
+{{ csrf_field() }}
 
     <div class="form-group">
         {!! Form::label('name', 'Name') !!}
@@ -60,7 +61,23 @@
     </div>
 
 {!! Form::close() !!}
+
+    {!! Form::model($user, ['method' => 'DELETE', 'action' => ['AdminUsersController@destroy', $user->id]]) !!}
+    {{ csrf_field() }}
+         <div class="form-group">
+        {!! Form::submit('Delete User', ['class' => 'btn btn-danger']) !!}
+        
+        </div>
+    {!! Form::close() !!}
+
+
+
+
 </div>
+
+
+
+
 
 
 @include('partials.form_error')
