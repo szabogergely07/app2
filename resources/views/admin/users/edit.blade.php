@@ -56,7 +56,7 @@
     </div>
 
     <div class="form-group">
-        {!! Form::submit('Update User', ['class' => 'btn btn-primary']) !!}
+        {!! Form::submit('Update User', ['class' => 'btn btn-primary col-sm-4', 'style' => 'margin-right: 10px']) !!}
         
     </div>
 
@@ -65,7 +65,7 @@
     {!! Form::open(['method' => 'DELETE', 'action' => ['AdminUsersController@destroy', $user->id]]) !!}
     {{ csrf_field() }}
          <div class="form-group">
-        {!! Form::submit('Delete User', ['class' => 'btn btn-danger col-sm-6']) !!}
+        {!! Form::submit('Delete User', ['class' => 'btn btn-danger col-sm-4']) !!}
         
         </div>
     {!! Form::close() !!}
