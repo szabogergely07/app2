@@ -6,6 +6,7 @@ use App\Post;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Http\Requests\PostsCreateRequest;
 
 class AdminPostsController extends Controller
 {
@@ -37,7 +38,7 @@ class AdminPostsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PostsCreateRequest $request)
     {
         $input = $request->all();
 

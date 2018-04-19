@@ -8,7 +8,11 @@
 
 <br>
 
-<div class="container">
+<div class="col-sm-12">
+@include('partials.form_error')
+</div>
+
+<div class="container col-sm-12">
 
 {!! Form::open(['method' => 'POST', 'action' => 'AdminUsersController@store']) !!}
 
@@ -57,7 +61,6 @@
 </div>
 
 
-@include('partials.form_error')
 
 
 

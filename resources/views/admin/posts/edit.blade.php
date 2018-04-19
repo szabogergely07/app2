@@ -9,7 +9,7 @@
 <br>
 
 <div class="col-sm-3">
-    <img height=70 class="img-rounded img-responsive" src="{{$post->user->photo_id}}">    
+    <img height=70 class="img-rounded img-responsive" src="{{$post->photo_id}}">    
 
 </div>
 <br>

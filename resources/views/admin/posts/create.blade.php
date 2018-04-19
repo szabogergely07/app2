@@ -10,32 +10,36 @@
 
 <br>
 
-<div class="container">
+<div class="col-sm-12">
+@include('partials.form_error')
+</div>
 
-{!! Form::open(['method' => 'POST', 'action' => 'AdminPostsController@store', 'style'=>'width:500px']) !!}
+<div class="container col-sm-12">
+
+{!! Form::open(['method' => 'POST', 'action' => 'AdminPostsController@store']) !!}
 
     <div class="form-group">
         {!! Form::label('title', 'Title') !!}
         {!! Form::text('title', null, ['class' => 'form-control']) !!}
-        {{ $errors->first('title', '<p class="help-block">:message</p>') }}
+       
     </div>
 
     <div class="form-group">
         {!! Form::label('body', 'Body') !!}
-        {!! Form::text('body', null, ['class' => 'form-control']) !!}
-        {{ $errors->first('title', '<p class="help-block">:message</p>') }}
+        {!! Form::textarea('body', null, ['class' => 'form-control', 'rows' => 8]) !!}
+       
     </div>
 
    	<div class="form-group">
         {!! Form::label('category_id', 'Category') !!}
-        {!! Form::text('category_id', null, ['class' => 'form-control']) !!}
-        {{ $errors->first('title', '<p class="help-block">:message</p>') }}
+        {!! Form::select('category_id', array(''=>'options'), null, ['class' => 'form-control']) !!}
+       
     </div>
 
     <div class="form-group">
         {!! Form::label('photo_id', 'Photo') !!}
         {!! Form::text('photo_id', null, ['class' => 'form-control']) !!}
-        {{ $errors->first('title', '<p class="help-block">:message</p>') }}
+       
     </div>
 
     <div class="form-group">
@@ -47,7 +51,7 @@
 </div>
 
 
-@include('partials.form_error')
+
 
 
 
