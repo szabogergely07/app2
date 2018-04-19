@@ -28,7 +28,7 @@
     <td><a href="{{route('admin.posts.edit', $post->id)}}"> {{$post->title}}</a></td>
     <td>{{$post->body}}</td>
     <td><img height=50 class="img-rounded" src="{{$post->photo_id}}"></td>
-    <td>{{$post->category_id}}</td>
+    <td>{{$post->category ? $post->category->name : "Uncategorized"}}</td>
     <td>{{$post->created_at->diffForHumans()}}</td>
   	<td>{{$post->updated_at->diffForHumans()}}</td>
   </tr>
