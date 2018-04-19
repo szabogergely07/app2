@@ -32,6 +32,11 @@
                     <a class="navbar-brand" href="{{ url('/') }}">
                         {{ config('app.name', 'Laravel') }}
                     </a>
+                     
+                    <a class="navbar-brand" href="{{ url('/admin') }}">
+                        Admin
+                    </a>
+                           
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -66,6 +71,7 @@
                                     </li>
                                 </ul>
                             </li>
+                            
                         @endguest
                     </ul>
                 </div>

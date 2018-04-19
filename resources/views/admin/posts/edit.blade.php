@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container">
+<div class="">
 	<h2>Edit Post</h2>
 </div>
 

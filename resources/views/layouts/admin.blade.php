@@ -43,6 +43,9 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="/">Home</a>
+            <a class="navbar-brand" href="{{ url('/admin') }}">
+                Admin
+            </a>
         </div>
         <!-- /.navbar-header -->
 
@@ -93,6 +96,7 @@
         {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ auth()->user()->name }} <span class="caret"></span></a>--}}
         {{--<ul class="dropdown-menu" role="menu">--}}
         {{--<li><a href="{{ url('/auth/logout') }}">Logout</a></li>--}}
+       
 
         {{--<li><a href="{{ url('/admin/profile') }}/{{auth()->user()->id}}">Profile</a></li>--}}
         {{--</ul>--}}
@@ -349,8 +353,12 @@
 </div>
 <!-- /#wrapper -->
 
+
+ <!-- Scripts -->
+<script src="{{ asset('js/app.js') }}"></script>
 <!-- jQuery -->
 <script src="{{asset('js/libs.js')}}"></script>
+
 
 
 @yield('footer')
