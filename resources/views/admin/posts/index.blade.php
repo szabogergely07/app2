@@ -25,8 +25,8 @@
   <tr>
     <td>{{$post->id}}</td>
     <td>{{$post->user->name}}</td>
-    <td><a href="{{route('admin.posts.edit', $post->id)}}"> {{str_limit($post->title, 10)}}</a></td>
-    <td>{{str_limit($post->body, 20)}}</td>
+    <td><a href="{{route('admin.posts.edit', $post->id)}}"> {{str_limit($post->title, 20)}}</a></td>
+    <td>{{str_limit($post->body, 40)}}</td>
     <td><img height=50 class="img-rounded" src="{{$post->photo_id}}"></td>
     <td>{{$post->category ? $post->category->name : "Uncategorized"}}</td>
     <td>{{$post->created_at->diffForHumans()}}</td>

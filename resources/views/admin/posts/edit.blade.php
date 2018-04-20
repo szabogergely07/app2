@@ -27,13 +27,13 @@
 
     <div class="form-group">
         {!! Form::label('body', 'Body') !!}
-        {!! Form::text('body', null, ['class' => 'form-control']) !!}
+        {!! Form::textarea('body', null, ['class' => 'form-control', 'rows' => 10]) !!}
         {{ $errors->first('title', '<p class="help-block">:message</p>') }}
     </div>
 
    	<div class="form-group">
         {!! Form::label('category_id', 'Category') !!}
-        {!! Form::text('category_id', null, ['class' => 'form-control']) !!}
+        {!! Form::select('category_id', $categories, null, ['class' => 'form-control']) !!}
         {{ $errors->first('title', '<p class="help-block">:message</p>') }}
     </div>
 
