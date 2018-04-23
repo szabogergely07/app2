@@ -2,14 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Post;
-use App\User;
-use App\Category;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
-use App\Http\Requests\PostsCreateRequest;
 
-class AdminPostsController extends Controller
+class CommentRepliesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,9 +13,7 @@ class AdminPostsController extends Controller
      */
     public function index()
     {
-        
-        $posts = Post::all();
-        return view('admin.posts.index', compact('posts'));
+        //
     }
 
     /**
@@ -30,10 +23,7 @@ class AdminPostsController extends Controller
      */
     public function create()
     {
-
-        $categories = Category::pluck('name', 'id')->all();
-
-        return view('admin.posts.create', compact('categories'));
+        //
     }
 
     /**
@@ -42,15 +32,9 @@ class AdminPostsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(PostsCreateRequest $request)
+    public function store(Request $request)
     {
-        $input = $request->all();
-
-        $input['user_id'] = Auth::user()->id;
-
-        Post::create($input);
-
-        return redirect('/admin/posts');
+        //
     }
 
     /**
@@ -72,12 +56,7 @@ class AdminPostsController extends Controller
      */
     public function edit($id)
     {
-        
-        $post = Post::FindOrFail($id);
-
-        $categories = Category::pluck('name', 'id')->all();
-
-        return view('admin.posts.edit', compact('post', 'categories'));
+        //
     }
 
     /**
@@ -89,13 +68,7 @@ class AdminPostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $input = $request->all();
-
-        $post = Post::FindOrFail($id);
-
-        $post->update($input);
-
-        return redirect('/admin/posts');
+        //
     }
 
     /**
@@ -106,18 +79,6 @@ class AdminPostsController extends Controller
      */
     public function destroy($id)
     {
-        $post = Post::FindOrFail($id);
-        $post->delete();
-
-        return redirect('/admin/posts');
-    }
-
-    public function post($id)
-    {
-
-        $categories = Category::all();
-
-        $post = Post::FindOrFail($id);
-        return view('post', compact('post', 'categories'));
+        //
     }
 }

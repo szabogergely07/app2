@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/post/{id}', ['as'=>'home.post', 'uses'=>'AdminPostsController@post']);
+
 Auth::routes();
 
 Route::get('/logout', 'Auth\LoginController@logout');
@@ -50,20 +52,29 @@ Route::group(['middleware' => 'admin'], function() {
 	Route::resource('admin/posts', 'AdminPostsController',['names'=>[
 
 
-	        'index'=>'admin.posts.index',
-	        'create'=>'admin.posts.create',
-	        'store'=>'admin.posts.store',
-	        'edit'=>'admin.posts.edit'
+        'index'=>'admin.posts.index',
+        'create'=>'admin.posts.create',
+        'store'=>'admin.posts.store',
+        'edit'=>'admin.posts.edit'
 
 	]]);
 
 	Route::resource('admin/categories', 'AdminCategoriesController',['names'=>[
 
 
-	        'index'=>'admin.categories.index',
-	        'create'=>'admin.categories.create',
-	        'store'=>'admin.categories.store',
-	        'edit'=>'admin.categories.edit'
+        'index'=>'admin.categories.index',
+        'create'=>'admin.categories.create',
+        'store'=>'admin.categories.store',
+        'edit'=>'admin.categories.edit'
 
 	]]);
+
+	Route::resource('admin/comments', 'PostCommentsController',['names'=>[
+
+		 'index'=>'admin.comments.index'
+		]]);
+
+	Route::resource('admin/comments/replies', 'CommentRepliesController');
+
+
 });
